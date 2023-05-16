@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Practical 9.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #000000; }
+.cpp1-assembler { color: #00FF00; }
+.cpp1-character { color: #FFFF00; }
+.cpp1-comment { color: #C0C0C0; font-style: italic; }
+.cpp1-float { color: #FF00FF; }
+.cpp1-hexadecimal { color: #FF00FF; }
+.cpp1-identifier { color: #FFFFFF; }
+.cpp1-illegalchar { background-color: #800000; color: #FFFF00; }
+.cpp1-number { color: #FF00FF; }
+.cpp1-octal { color: #FF00FF; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { color: #00FFFF; }
+.cpp1-space { background-color: #000000; color: #FFFFFF; }
+.cpp1-string { color: #FFFF00; }
+.cpp1-symbol { color: #00FFFF; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 12pt Consolas;"><span class="cpp1-preprocessor">#include&lt;iostream&gt;
+</span><span class="cpp1-reservedword">using</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">namespace</span><span class="cpp1-space"> std</span><span class="cpp1-symbol">;
+
+void</span><span class="cpp1-space"> calculateArea</span><span class="cpp1-symbol">(int</span><span class="cpp1-space"> side</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> area</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	area</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">side</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">side</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Area of Square is &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">area</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+}
+
+void</span><span class="cpp1-space"> calculateArea</span><span class="cpp1-symbol">(int</span><span class="cpp1-space"> length</span><span class="cpp1-symbol">,int</span><span class="cpp1-space"> breadth</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> area</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	area</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">length</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">breadth</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Area of Rectangle is &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">area</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+}
+
+void</span><span class="cpp1-space"> calculateArea</span><span class="cpp1-symbol">(float</span><span class="cpp1-space"> radius</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> area</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	area</span><span class="cpp1-symbol">=</span><span class="cpp1-float">3.14</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">radius</span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">radius</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Area of Circle is &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">area</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+}
+
+int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Calling the calculateArea() with one argument to find the area of square.&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	calculateArea</span><span class="cpp1-symbol">(</span><span class="cpp1-number">10</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Calling the calculateArea() with two argument to find the area of rectangle.&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	calculateArea</span><span class="cpp1-symbol">(</span><span class="cpp1-number">10</span><span class="cpp1-symbol">,</span><span class="cpp1-number">20</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Calling the calculateArea() with one argument to find the area of circle.&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	calculateArea</span><span class="cpp1-symbol">(</span><span class="cpp1-float">5.5f</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return(</span><span class="cpp1-number">0</span><span class="cpp1-symbol">);
+}
+</span></span>
+</code></pre>
+</body>
+</html>

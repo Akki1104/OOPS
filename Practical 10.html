@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Practical 10.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #000000; }
+.cpp1-assembler { color: #00FF00; }
+.cpp1-character { color: #FFFF00; }
+.cpp1-comment { color: #C0C0C0; font-style: italic; }
+.cpp1-float { color: #FF00FF; }
+.cpp1-hexadecimal { color: #FF00FF; }
+.cpp1-identifier { color: #FFFFFF; }
+.cpp1-illegalchar { background-color: #800000; color: #FFFF00; }
+.cpp1-number { color: #FF00FF; }
+.cpp1-octal { color: #FF00FF; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { color: #00FFFF; }
+.cpp1-space { background-color: #000000; color: #FFFFFF; }
+.cpp1-string { color: #FFFF00; }
+.cpp1-symbol { color: #00FFFF; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 12pt Consolas;"><span class="cpp1-preprocessor">#include&lt;iostream&gt;
+</span><span class="cpp1-reservedword">using</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">namespace</span><span class="cpp1-space"> std</span><span class="cpp1-symbol">;
+
+class</span><span class="cpp1-space"> dimensions</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">public:
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> length</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> width</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> height</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		
+		dimensions</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Default Constructor is called:&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			length</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			width</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			height</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		dimensions</span><span class="cpp1-symbol">(float</span><span class="cpp1-space"> l</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;\nConstructor having one parameter is called:&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			length</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">l</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			width</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			height</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		dimensions</span><span class="cpp1-symbol">(float</span><span class="cpp1-space"> l</span><span class="cpp1-symbol">,float</span><span class="cpp1-space"> w</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;\nConstructor having two parameters is called:&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			length</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">l</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			width</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">w</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			height</span><span class="cpp1-symbol">=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		dimensions</span><span class="cpp1-symbol">(float</span><span class="cpp1-space"> l</span><span class="cpp1-symbol">,float</span><span class="cpp1-space"> w</span><span class="cpp1-symbol">,float</span><span class="cpp1-space"> h</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;\nConstructor having three parameters is called:&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			length</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">l</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			width</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">w</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			height</span><span class="cpp1-symbol">=</span><span class="cpp1-identifier">h</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> display</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Length : &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">length</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Width : &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">width</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Height : &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">height</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+};
+
+int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">	dimensions d1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	d1</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	dimensions d2</span><span class="cpp1-symbol">(</span><span class="cpp1-float">10.5f</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	d2</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	dimensions d3</span><span class="cpp1-symbol">(</span><span class="cpp1-float">10.5f</span><span class="cpp1-symbol">,</span><span class="cpp1-float">20.5f</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	d3</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	dimensions d4</span><span class="cpp1-symbol">(</span><span class="cpp1-float">10.5f</span><span class="cpp1-symbol">,</span><span class="cpp1-float">20.5f</span><span class="cpp1-symbol">,</span><span class="cpp1-float">30.5f</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	d4</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">return(</span><span class="cpp1-number">0</span><span class="cpp1-symbol">);
+}
+</span></span>
+</code></pre>
+</body>
+</html>

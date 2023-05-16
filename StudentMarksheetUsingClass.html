@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>StudentMarksheetUsingClass.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #000000; }
+.cpp1-assembler { color: #00FF00; }
+.cpp1-character { color: #FFFF00; }
+.cpp1-comment { color: #C0C0C0; font-style: italic; }
+.cpp1-float { color: #FF00FF; }
+.cpp1-hexadecimal { color: #FF00FF; }
+.cpp1-identifier { color: #FFFFFF; }
+.cpp1-illegalchar { background-color: #800000; color: #FFFF00; }
+.cpp1-number { color: #FF00FF; }
+.cpp1-octal { color: #FF00FF; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { color: #00FFFF; }
+.cpp1-space { background-color: #000000; color: #FFFFFF; }
+.cpp1-string { color: #FFFF00; }
+.cpp1-symbol { color: #00FFFF; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 13pt Consolas;"><span class="cpp1-preprocessor">#include&lt;iostream&gt;
+</span><span class="cpp1-reservedword">using</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">namespace</span><span class="cpp1-space"> std</span><span class="cpp1-symbol">;
+
+class</span><span class="cpp1-space"> Student</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">public:
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> rollNo</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		string name</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> marks_rdbms</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> marks_cpp</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> message</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;\n\t\t\tDEVELOPED BY AKASH KUMAR\n&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> total</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> sum </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			sum</span><span class="cpp1-symbol">=</span><span class="cpp1-space"> marks_rdbms </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> marks_cpp</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">return(</span><span class="cpp1-identifier">sum</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> percentage</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> perc </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			perc </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">total</span><span class="cpp1-symbol">()/</span><span class="cpp1-number">200</span><span class="cpp1-symbol">)*</span><span class="cpp1-number">100</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">return(</span><span class="cpp1-identifier">perc</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> grade</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> perc </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> percentage</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">			
+			</span><span class="cpp1-reservedword">if(</span><span class="cpp1-identifier">perc </span><span class="cpp1-symbol">&gt;</span><span class="cpp1-space"> </span><span class="cpp1-number">80</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">			  </span><span class="cpp1-reservedword">return(</span><span class="cpp1-character">'A'</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if(</span><span class="cpp1-identifier">perc </span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">80</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> perc </span><span class="cpp1-symbol">&gt;</span><span class="cpp1-space"> </span><span class="cpp1-number">65</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">			  </span><span class="cpp1-reservedword">return(</span><span class="cpp1-character">'B'</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if(</span><span class="cpp1-identifier">perc </span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">65</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> perc </span><span class="cpp1-symbol">&gt;</span><span class="cpp1-space"> </span><span class="cpp1-number">50</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">			  </span><span class="cpp1-reservedword">return(</span><span class="cpp1-character">'C'</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">if(</span><span class="cpp1-identifier">perc </span><span class="cpp1-symbol">&lt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">50</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> perc </span><span class="cpp1-symbol">&gt;</span><span class="cpp1-space"> </span><span class="cpp1-number">40</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">			  </span><span class="cpp1-reservedword">return(</span><span class="cpp1-character">'D'</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">else</span><span class="cpp1-space"> 
+			  </span><span class="cpp1-reservedword">return(</span><span class="cpp1-character">'F'</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> display</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">			cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot; &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">rollNo</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;\t\t&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">name</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;\t &quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">total</span><span class="cpp1-symbol">()&lt;&lt;</span><span class="cpp1-string">&quot;  \t&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">percentage</span><span class="cpp1-symbol">()&lt;&lt;</span><span class="cpp1-string">&quot;\t\t&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">grade</span><span class="cpp1-symbol">()&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-symbol">}
+};
+
+int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">	Student m</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	m</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">message</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> n</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Enter number of Students: &quot;</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	cin</span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-identifier">n</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	system</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;CLS&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	
+	Student s</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">n</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-reservedword">for(</span><span class="cpp1-identifier">i </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i </span><span class="cpp1-symbol">&lt;</span><span class="cpp1-space"> n</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++){
+</span><span class="cpp1-space">		cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Enter Roll Number: &quot;</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cin</span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">].</span><span class="cpp1-identifier">rollNo</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Enter name: &quot;</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cin</span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">].</span><span class="cpp1-identifier">name</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Enter marks in RDBMS: &quot;</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cin</span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">].</span><span class="cpp1-identifier">marks_rdbms</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;Enter marks in C++: &quot;</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		cin</span><span class="cpp1-symbol">&gt;&gt;</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">].</span><span class="cpp1-identifier">marks_cpp</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		
+		system</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;CLS&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">	
+	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot;----------------------MARKSHEET----------------------\n&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	cout</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-string">&quot; Roll Number\tName\tTotal\tPercentage\tGrade&quot;</span><span class="cpp1-symbol">&lt;&lt;</span><span class="cpp1-identifier">endl</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-reservedword">for(</span><span class="cpp1-identifier">i </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i </span><span class="cpp1-symbol">&lt;</span><span class="cpp1-space"> n</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++)
+</span><span class="cpp1-space">	   s</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">].</span><span class="cpp1-identifier">display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">	   
+	m</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">message</span><span class="cpp1-symbol">();
+}
+</span></span>
+</code></pre>
+</body>
+</html>
